@@ -4,7 +4,18 @@ import Script from "next/script";
 export default function Document() {
     return (
         <Html lang="bg">
-            <Head />
+            <Head>
+                <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=AW-11437144145`}></Script>
+                <Script id="gtm-script" strategy="afterInteractive">
+                        {`
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                
+                  gtag('config', 'AW-11437144145');
+                  `}
+                </Script>
+            </Head>
             <link
                 rel="preload"
                 href="/fonts/MISTRAL.woff"
@@ -17,16 +28,6 @@ export default function Document() {
                 <Main />
                 <NextScript />
             </body>
-            <Script strategy="lazyOnload" src={"https://www.googletagmanager.com/gtag/js?id=AW-11437144145"}></Script>
-            <Script stragety="lazyOnload" id="data-layer-id">
-                    {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-            
-              gtag('config', 'AW-11437144145');
-              `}
-            </Script>
         </Html>
     );
 }
