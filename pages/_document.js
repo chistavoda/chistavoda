@@ -16,6 +16,16 @@ export default function Document() {
                 <Main />
                 <NextScript />
             </body>
+            <Script strategy="lazyOnload" src={"https://www.googletagmanager.com/gtag/js?id=AW-11437144145"}></Script>
+            <Script stragety="lazyOnload">
+                    {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+            
+              gtag('config', 'AW-11437144145');
+              `}
+            </Script>
         </Html>
     );
 }
