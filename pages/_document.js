@@ -18,7 +18,7 @@ export default function Document() {
                 <NextScript />
             </body>
             <Script strategy="lazyOnload" src={"https://www.googletagmanager.com/gtag/js?id=AW-11437144145"}></Script>
-            <Script stragety="lazyOnload">
+            <Script stragety="lazyOnload" id="data-layer-id">
                     {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
